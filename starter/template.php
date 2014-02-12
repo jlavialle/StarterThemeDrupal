@@ -112,7 +112,7 @@
  *   The name of the template being rendered ("html" in this case.)
  */
 /* -- Delete this line if you want to use this function*/
-function peugeot_vo_preprocess_html(&$variables, $hook) {
+function starter_preprocess_html(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To
@@ -130,7 +130,7 @@ function peugeot_vo_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function*/
-function peugeot_vo_preprocess_page(&$variables, $hook) {
+function starter_preprocess_page(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 
@@ -143,7 +143,7 @@ function peugeot_vo_preprocess_page(&$variables, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function*/
-function peugeot_vo_preprocess_node(&$variables, $hook) {
+function starter_preprocess_node(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
   $node = $variables['node'];
   // suggestion mode d'affichage
@@ -167,7 +167,7 @@ function peugeot_vo_preprocess_node(&$variables, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function*/
-function peugeot_vo_preprocess_comment(&$variables, $hook) {
+function starter_preprocess_comment(&$variables, $hook) {
   $variables['sample_variable'] = t('Lorem ipsum.');
 }
 
@@ -181,7 +181,7 @@ function peugeot_vo_preprocess_comment(&$variables, $hook) {
  *   The name of the template being rendered ("region" in this case.)
  */
 /* -- Delete this line if you want to use this function*/
-function peugeot_vo_preprocess_region(&$variables, $hook) {
+function starter_preprocess_region(&$variables, $hook) {
   // Don't use Zen's region--sidebar.tpl.php template for sidebars.
   //if (strpos($variables['region'], 'sidebar_') === 0) {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
@@ -197,7 +197,7 @@ function peugeot_vo_preprocess_region(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function*/
-function peugeot_vo_preprocess_block(&$variables, $hook) {
+function starter_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
   // $variables['classes_array'][] = 'count-' . $variables['block_id'];
 
@@ -208,7 +208,7 @@ function peugeot_vo_preprocess_block(&$variables, $hook) {
   //}
 }
 
-function peugeot_vo_field($variables) {
+function starter_field($variables) {
   $output = '';
 
   foreach ($variables['items'] as $delta => $item) {
